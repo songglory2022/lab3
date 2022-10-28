@@ -3,7 +3,9 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
 
-class ListExamples {
+public class ListExamples {
+
+ 
 
   // Returns a new list that has all the elements of the input list for which
   // the StringChecker returns true, and not the elements that return false, in
@@ -12,7 +14,7 @@ class ListExamples {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
-        result.add(0, s);
+        result.add(result.size(), s);
       }
     }
     return result;
@@ -47,3 +49,4 @@ class ListExamples {
 
 
 }
+
